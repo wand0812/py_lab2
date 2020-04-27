@@ -1,12 +1,19 @@
 #!/usr/bin/python3
 
 def binary():
-binnum = input('input binary number : ')
-two = '0b'
-base = two + binnum
-ten = int(base, 2)
-eight = format(ten, 'o')
-hexa = format(ten, 'X')
-print("\n=> OCT> "+ eight)
-print("=> DEC> ",ten)
-print("=> HEX> "+ hexa) 
+    print("input binary number: ")
+
+    wow = str(input())
+    
+    num = 0
+
+    for i,digit in enumerate(wow):
+        num +=int(digit)*pow(2,len(wow) - 1 - i)
+
+
+    valoct = format(num, 'o')
+    valhex = format(num, 'x')
+
+    print("OCT> ",valoct)
+    print("DEC> ",num)
+    print("HEX> ",valhex)
